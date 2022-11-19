@@ -1,0 +1,87 @@
+@import "./global";
+
+.header {
+  width: 100%;
+}
+
+.navbar {
+  width: 100%;
+  padding: 25px 150px;
+  @include daj();
+  background-color: $bgGlobal;
+  box-shadow: 0 0 10px $boxShadow;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  .logo {
+    width: 10%;
+    img {
+      width: 100%;
+    }
+  }
+  .menu {
+    width: 30%;
+    @include daj();
+    .list_items {
+      border-bottom: 2px solid $bgGlobal;
+      transition: $transitionGlobal;
+      .item_links {
+        font-weight: 400;
+        font-size: $fontSize18;
+        letter-spacing: 0.7px;
+        color: $textGlobal;
+        margin-bottom: 2px;
+        transition: $transitionGlobal;
+      }
+      &:hover {
+        border-color: $btnHover;
+        .item_links {
+          color: $btnHover;
+        }
+      }
+    }
+  }
+  .btn {
+    font-weight: 500;
+    font-size: $fontSize16;
+    letter-spacing: 0.7px;
+    color: $bgGlobal;
+    padding: 15px 30px;
+    background-color: $btnColor;
+    border-radius: $borderRadiusTwo;
+    transition: $transitionGlobal;
+    &:hover {
+      background-color: $btnHover;
+    }
+  }
+}
+
+.header_block {
+  width: 100%;
+  padding: 100px 150px 50px 150px;
+  @include daj();
+  .head_texts {
+    width: 50%;
+    @include dcs();
+    h4 {
+      font-weight: 600;
+      font-size: $fontSize40;
+      letter-spacing: 0.7px;
+      color: $textGlobal;
+    }
+    h1 {
+      font-weight: 700;
+      font-size: $fontSize100;
+      letter-spacing: 0.7px;
+      color: $textGlobal;
+      margin-top: 10px;
+    }
+  }
+  .head_img {
+    width: 45%;
+    @include dcc();
+    img {
+      width: 100%;
+    }
+  }
+}
