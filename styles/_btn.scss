@@ -1,0 +1,15 @@
+// ===== //
+
+@mixin btnGlobal {
+  font-weight: 500;
+  font-size: $fontSize16;
+  letter-spacing: 0.7px;
+  color: $bgGlobal;
+  padding: 15px 30px;
+  background-color: $btnColor;
+  border-radius: $borderRadiusTwo;
+  transition: $transitionGlobal;
+  &:hover {
+    background-color: $btnHover;
+  }
+}

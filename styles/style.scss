@@ -1,8 +1,12 @@
 @import "./global";
 
+// ===== Header ===== //
+
 .header {
   width: 100%;
 }
+
+// === Navbar === //
 
 .navbar {
   width: 100%;
@@ -42,19 +46,11 @@
     }
   }
   .btn {
-    font-weight: 500;
-    font-size: $fontSize16;
-    letter-spacing: 0.7px;
-    color: $bgGlobal;
-    padding: 15px 30px;
-    background-color: $btnColor;
-    border-radius: $borderRadiusTwo;
-    transition: $transitionGlobal;
-    &:hover {
-      background-color: $btnHover;
-    }
+    @include btnGlobal();
   }
 }
+
+// === header block === //
 
 .header_block {
   width: 100%;
@@ -63,18 +59,42 @@
   .head_texts {
     width: 50%;
     @include dcs();
-    h4 {
+    h3 {
       font-weight: 600;
-      font-size: $fontSize40;
+      font-size: $fontSize24;
       letter-spacing: 0.7px;
       color: $textGlobal;
     }
     h1 {
       font-weight: 700;
-      font-size: $fontSize100;
+      font-size: $fontSize80;
       letter-spacing: 0.7px;
       color: $textGlobal;
-      margin-top: 10px;
+    }
+    .btn {
+      @include btnGlobal();
+      margin-top: 50px;
+    }
+    .members {
+      width: 50%;
+      @include daj();
+      margin-top: 50px;
+      .member_box {
+        text-align: center;
+        h4 {
+          font-weight: 600;
+          font-size: $fontSize30;
+          letter-spacing: 0.7px;
+          color: $textGlobal;
+        }
+        p {
+          font-weight: 400;
+          font-size: $fontSize16;
+          letter-spacing: 0.7px;
+          color: $opacityColor;
+          margin-top: 10px;
+        }
+      }
     }
   }
   .head_img {
@@ -84,4 +104,11 @@
       width: 100%;
     }
   }
+}
+
+// === catagories === //
+
+.catagories {
+  width: 100%;
+  padding: 50px 150px;
 }
