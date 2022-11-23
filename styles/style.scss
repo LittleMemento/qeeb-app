@@ -113,7 +113,7 @@
   padding: 50px 150px;
   h3 {
     font-weight: 600;
-    font-size: $fontSize40;
+    font-size: $fontSize30;
     color: $textGlobal;
     letter-spacing: 0.7px;
     margin-bottom: 50px;
@@ -144,5 +144,109 @@
         margin-bottom: 30px;
       }
     }
+  }
+}
+
+// === collections === //
+
+.collections {
+  width: 100%;
+  padding: 50px 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $bgColoor;
+  .coll_title {
+    width: 100%;
+    @include daj();
+    margin-bottom: 50px;
+    h3 {
+      font-weight: 600;
+      font-size: $fontSize30;
+      color: $textGlobal;
+      letter-spacing: 0.7px;
+    }
+    .day_btn {
+      display: flex;
+      align-items: center;
+      // padding: 5px;
+      border-radius: $borderRadiusTwo;
+      background-color: $bgColor;
+      h6 {
+        font-weight: 400;
+        font-size: $fontSize16;
+        letter-spacing: 0.7px;
+        color: $textGlobal;
+        background-color: $bgColoor;
+        margin: 5px;
+        border-radius: $borderRadiusTwo;
+        padding: 20px 50px;
+        cursor: pointer;
+        transition: $transitionGlobal;
+        &:nth-child(2) {
+          background: transparent;
+          &:hover {
+            background-color: $bgColoor;
+          }
+        }
+      }
+    }
+  }
+  .coll_cards {
+    width: 100%;
+    @include daj();
+    margin-bottom: 25px;
+    .card_box {
+      width: 32%;
+      @include daj();
+      padding: 10px;
+      gap: 15px;
+      border-radius: $borderRadiusTwo;
+      background-color: $bgColor;
+      img {
+        width: 20%;
+      }
+      .texts {
+        width: 80%;
+        @include daj();
+        .text_one {
+          @include dcs();
+          b {
+            font-weight: 500;
+            font-size: $fontSize24;
+            letter-spacing: 0.7px;
+            color: $textGlobal;
+          }
+          small {
+            font-weight: 400;
+            font-size: $fontSize16;
+            letter-spacing: 0.7px;
+            color: $opacityColor;
+          }
+        }
+        .text_two {
+          @include dcs();
+          small {
+            font-weight: 400;
+            font-size: $fontSize14;
+            letter-spacing: 0.7px;
+            &:nth-child(1) {
+              color: $textGlobal;
+            }
+            &:nth-child(2) {
+              color: $opacityColor;
+            }
+            &:nth-child(3) {
+              color: $btnColor;
+              font-size: $fontSize12;
+            }
+          }
+        }
+      }
+    }
+  }
+  .btn {
+    @include btnGlobal();
+    margin-top: 25px;
   }
 }
